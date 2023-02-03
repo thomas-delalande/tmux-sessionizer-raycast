@@ -1,18 +1,18 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "tmux-sessionizer-raycast",
-  "title": "tmux-sessionizer-raycast",
+  "title": "Tmux Sessionizer",
   "description": "Opens a project in Tmux",
   "icon": "command-icon.png",
   "author": "thomas-delalande",
   "categories": [
-    "Productivity"
+    "Developer Tools"
   ],
   "license": "MIT",
   "commands": [
     {
       "name": "tmux",
-      "title": "tmux",
+      "title": "Open Project",
       "description": "Open a project",
       "mode": "view"
     }
@@ -23,7 +23,7 @@
       "description": "The path to your TMUX instance",
       "type": "file",
       "required": false,
-      "title": "TMUX Path",
+      "title": "Tmux Path",
       "default": "/opt/homebrew/bin/tmux"
     },
     {
