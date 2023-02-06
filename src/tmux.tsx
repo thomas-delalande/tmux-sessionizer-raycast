@@ -20,11 +20,11 @@ export default function Command() {
 
   useEffect(() => {
     const projectDirs = [preferences.projectsDir1, preferences.projectsDir2];
-    console.log(preferences);
+
     const localProjects = projectDirs.flatMap((directory) => {
       if (directory === undefined) return [];
       return readdirSync(directory, { withFileTypes: true })
-        .filter((dirent) => dirent.isDirectory())
+        .filter((dirent) => dirent.isDirectory() || dirent.isSymbolicLink())
         .map((dirent) => `${directory}/${dirent.name}`);
     });
     setProjects(localProjects);
